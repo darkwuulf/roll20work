@@ -991,6 +991,123 @@
                 </table>
             </fieldset>
         </div>
+        
+        <div class="sheet-twocell-bottompadding">
+            <table class="sheet-table-twocolumn">
+                <tr>
+                    <td class="sheet-text-header" colspan="6">
+                        MOUNT
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Name:
+                    </td>
+                    <td>
+                        <input class="sheet-textinput-gear" name="attr_mountname" type="text">
+                    </td>
+                    <td>
+                        Strength:
+                    </td>
+                    <td>
+                        <input class="sheet-value-brighter sheet-value-doubledigit" name="attr_mount-strength" type="number">
+                    </td>
+                    <td>
+                        Agility:
+                    </td>
+                    <td>
+                        <input class="sheet-value-brighter sheet-value-doubledigit" name="attr_mount-agility" type="number">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sheet-text-header-smaller" colspan="2">
+                        GEAR
+                    <td class="sheet-text-header-smaller">
+                        Encumberance
+                    </td>
+                    <td class="sheet-text-header-smaller">
+                        Rating
+                    </td>
+                    <td class="sheet-text-header-smaller">
+                        Amount
+                    </td>
+                    <td class="sheet-text-header-smaller">
+                        Carried
+                    </td>
+                </tr>
+                <tr class="sheet-row-light">
+                    <td colspan="2">
+                        <input class="sheet-textinput-gear" name="attr_mountgear-name" type="text">
+                    </td>
+                    <td valign="middle">
+                        <select name="attr_mountgear-encumberance">
+                            <option value="0">
+                                0 - Tiny
+                            </option>
+                            <option value="0.5">
+                                1/2 - Light
+                            </option>
+                            <option value="1">
+                                1 - Basic
+                            </option>
+                            <option value="2">
+                                2 - Heavy
+                            </option>
+                            <option value="3">
+                                3 - Very Heavy
+                            </option>
+                        </select>
+                    </td>
+                    <td>
+                        <input class="sheet-value-brighter sheet-value-singledigit" name="attr_mountgear-rank" type="number"> / <input class="sheet-value-brighter sheet-value-singledigit" name="attr_mountgearmaxrank-1" type="number">
+                    </td>
+                    <td>
+                        <input class="sheet-value-brighter sheet-value-doubledigit" name="attr_mountgear-amount" type="number">
+                    </td>
+                    <td>
+                        <input name="attr_mountgear-carried" type="checkbox">
+                    </td>
+                </tr>
+            </table>
+            <fieldset class="repeating_gear">
+                <table class="sheet-table-twocolumn sheet-table-notop">
+                    <tr class="sheet-row-light sheet-table-notop">
+                        <td class="sheet-table-notop">
+                            <input class="sheet-textinput-gear" name="attr_mountgear-name-repeating" type="text">
+                        </td>
+                        <td class="sheet-table-notop" valign="middle">
+                            <select name="attr_mountgearencumberance">
+                                <option value="0">
+                                    0 - Tiny
+                                </option>
+                                <option value="0.5">
+                                    1/2 - Light
+                                </option>
+                                <option value="1">
+                                    1 - Basic
+                                </option>
+                                <option value="2">
+                                    2 - Heavy
+                                </option>
+                                <option value="3">
+                                    3 - Very Heavy
+                                </option>
+                            </select>
+                        </td>
+                        <td class="sheet-table-notop">
+                            <input class="sheet-value-brighter sheet-value-singledigit" name="attr_mountgear-rating-repeating" type="number"> / <input class="sheet-value-brighter sheet-value-singledigit" name="attr_mountgear-rank-repeating_max" type="number">
+                        </td>
+                        <td class="sheet-table-notop">
+                            <input class="sheet-value-brighter sheet-value-doubledigit" name="attr_mountgear-amount-repeating" type="number">
+                        </td>
+                        <td class="sheet-table-notop">
+                            <input name="attr_mountgear-carried-repeating" type="checkbox">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+        
         <div class="sheet-relationships">
             <table class="sheet-table-twocolumn">
                 <tr>
@@ -1031,11 +1148,306 @@
         </div>
     </div>
 </div>
-<div class="sheet-character-wrapper sheet-tab-content sheet-tab-stronghold-sheet"> 
 
-
-
-
+<div class="sheet-character-wrapper sheet-tab-content sheet-tab-stronghold-sheet">
+    <div class="sheet-meta8">
+        <div class="sheet-twocell-bottompadding">
+            <table class="sheet-table-twocolumn">
+                <tr class="sheet-row-light">
+                    <td class="sheet-table-noright sheet-text-stats">
+                        Name:
+                    </td>
+                    <td class="sheet-table-noleftright">
+                        <input class="sheet-textinput-name" name="attr_stronghold_name" type="text">
+                    </td>
+                    <td class="sheet-table-noright sheet-text-stats">
+                        Defense Rating:
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value sheet-value-singledigit" name="attr_stronghold_defense" type="text">
+                    </td>
+                </tr>
+                <tr class="sheet-row-light">
+                    <td class="sheet-table-noright sheet-text-stats">
+                        Location:
+                    </td>
+                    <td class="sheet-table-noleftright" colspan="5">
+                        <input class="sheet-textinput-name" name="attr_stronghold_location" type="text">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="sheet-meta3">
+        <div class="sheet-singlecell-bottompadding">
+            <table class="sheet-table-onecolumn">
+                <tr class="sheet-text-header">
+                    <td class="sheet-text-header">
+                        DESCRIPTION
+                    </td>
+                </tr>
+                <tr class="sheet-table-noleft sheet-row-dark">
+                    <td class="sheet-text-stats">
+                        <textarea class="sheet-text-description" rows='4' name="attr_stronghold_description"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="sheet-meta5">
+        <div class="sheet-splitcell-bottompadding">
+            <div class="sheet-splitcell-bottompadding" style="float: left;">
+                <table class="sheet-table-splitcolumn">
+                    <tr class="sheet-text-header">
+                        <td class="sheet-text-header">
+                            FUNCTIONS
+                        </td>
+                        <td class="sheet-text-header-smaller">
+                            Number
+                        </td>
+                        <td class="sheet-text-header-smaller">
+                            Production
+                        </td>
+                    </tr>
+                    <tr class="sheet-row-light">
+                        <td class="table-noright">
+                            <input class="sheet-textinput-pcs" name="attr_stronghold_function_name-1" type="text">
+                        </td>
+                        <td class="sheet-table-noleftright">
+                            <input class="sheet-value-doubledigit" name="attr_stronghold_function_number-1" type="number">
+                        </td>
+                        <td class="sheet-table-noleft">
+                            <input class="sheet-value-tripeldigit" name="attr_stronghold_function_production-1" type="number">
+                        </td>
+                    </tr>
+                </table>
+                <fieldset class="repeating_stronghold_function">
+                    <table class="sheet-table-splitcolumn sheet-table-notop">
+                        <tr class="sheet-row-light sheet-table-notop">
+                            <td class="sheet-table-notop sheet-table-noright">
+                                <input class="sheet-textinput-pcs" name="attr_stronghold_function_name-repeating" type="text">
+                            </td>
+                            <td class="sheet-table-notop sheet-table-noleftright">
+                                <input class="sheet-value-tripeldigit" name="attr_stronghold_function_number-repeating" type="number">
+                            </td>
+                            <td class="sheet-table-notop sheet-table-noleft">
+                                <input class="sheet-value-tripledigit" name="attr_stronghold_function_production-repeating" type="number">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <div class="sheet-meta6">
+        <div class="sheet-splitcell-bottompadding">
+            <div class="sheet-splitcell-bottompadding" style="float: right;">
+                <table class="sheet-table-splitcolumn">
+                    <tr class="sheet-text-header">
+                        <td class="sheet-text-header" colspan="2">
+                            HIRELINGS
+                        </td>
+                        <td class="sheet-text-header-smaller">
+                            Number
+                        </td>
+                        <td class="sheet-text-header-smaller">
+                            Salary
+                        </td>
+                    </tr>
+                    <tr class="sheet-row-light">
+                        <td class="table-noright" colspan="2">
+                            <input class="sheet-textinput-pcs" name="attr_stronghold_hireling_name-1" type="text">
+                        </td>
+                        <td class="sheet-table-noleftright">
+                            <input class="sheet-value-doubledigit" name="attr_stronghold_hireling_number-1" type="number">
+                        </td>
+                        <td class="sheet-table-noleft">
+                            <input class="sheet-value-tripledigit" name="attr_stronghold_hireling_salary-1" type="number">
+                        </td>
+                    </tr>
+                </table>
+                <fieldset class="repeating_stronghold_hireling">
+                    <table class="sheet-table-splitcolumn sheet-table-notop">
+                        <tr class="sheet-row-light sheet-table-notop">
+                            <td class="sheet-table-notop sheet-table-noright">
+                                <input class="sheet-textinput-pcs" name="attr_stronghold_hireling_name-repeating" type="text">
+                            </td>
+                            <td class="sheet-table-notop sheet-table-noleftright">
+                                <input class="sheet-value-tripeldigit" name="attr_stronghold_hireling_number-repeating" type="number">
+                            </td>
+                            <td class="sheet-table-notop sheet-table-noleft">
+                                <input class="sheet-value-tripledigit" name="attr_stronghold_hireling_salary-repeating" type="number">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <div class="sheet-meta7">
+        <div class="sheet-fullwidth-bottompadding">
+            <table class="sheet-table-fullwidth">
+                <tr class="sheet-text-header">
+                    <td class="sheet-text-header">
+                        STOCKPILE
+                    </td>
+                    <td class="sheet-text-header-smaller">
+                        Units
+                    </td>
+                    <td class="sheet-text-header"></td>
+                    <td class="sheet-text-header-smaller">
+                        Units
+                    </td>
+                    <td class="sheet-text-header"></td>
+                    <td class="sheet-text-header-smaller">
+                        Units
+                    </td>
+                </tr>
+                <tr class="sheet-row-dark">
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Iron Ore
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_ironore" type="text">
+                    </td>
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Fur
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_fur" type="text">
+                    </td>
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Flour
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_flour" type="text">
+                    </td>
+                </tr>
+                <tr class="sheet-row-dark">
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Iron
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_iron" type="text">
+                    </td>
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Leather
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_leather" type="text">
+                    </td>
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Grain
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_grain" type="text">
+                    </td>
+                </tr>
+                <tr class="sheet-row-dark">
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Silver
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_silver" type="text">
+                    </td>
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Cloth
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_cloth" type="text">
+                    </td>
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Meat
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_meat" type="text">
+                    </td>
+                </tr>
+                <tr class="sheet-row-dark">
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Gold
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_gold" type="text">
+                    </td>
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Wool
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_wool" type="text">
+                    </td>
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Fish
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_fish" type="text">
+                    </td>
+                </tr>
+                <tr class="sheet-row-dark">
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Stone
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_stone" type="text">
+                    </td>
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Food
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_food" type="text">
+                    </td>
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Vegetables
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_vegetables" type="text">
+                    </td>
+                </tr>
+                <tr class="sheet-row-dark">
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Glass
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_glass" type="text">
+                    </td>
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Bread
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_bread" type="text">
+                    </td>
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Tallow
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_tallow" type="text">
+                    </td>
+                </tr>
+                <tr class="sheet-row-dark">
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Wood
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_wood" type="text">
+                    </td>
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Water
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_water" type="text">
+                    </td>
+                    <td class="sheet-table-noleftright sheet-text-stats">
+                        Herbs
+                    </td>
+                    <td class="sheet-table-noleft">
+                        <input class="sheet-value-doubledigit" name="attr_stockpile_herbs" type="text">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
 </div>
 
 <script type="text/worker">

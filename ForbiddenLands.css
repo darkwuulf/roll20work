@@ -4,7 +4,7 @@ Sheet Tabs
 div.sheet-tab-content { 
    display: none; 
    border-top:1px solid #ffffff;
-   margin-top:2px;
+   margin-top:-30px;
 }
 input.sheet-tab-character-sheet:checked ~ div.sheet-tab-character-sheet,
 input.sheet-tab-stronghold-sheet:checked ~ div.sheet-tab-stronghold-sheet,
@@ -25,7 +25,6 @@ input.sheet-tab {
 }
 input.sheet-tab::before {
    content: attr(title);
-
    border:1px solid #ccc;
    border-bottom:1px solid #444;
    border-radius:4px 4px 0 0;
@@ -51,7 +50,6 @@ input.sheet-tab:checked:hover::before {
    border-bottom:1px solid #fff;
    background:#fff;
 }
-
 
  /* -----
  Inputs 
@@ -97,8 +95,11 @@ input.sheet-tab:checked:hover::before {
  .sheet-value-doubledigit {
     width:39px;
  } 
- .sheet-value-tripedigit {
+ .sheet-value-trippledigit {
     width:50px;
+ }
+ .sheet-value-quaddigit {
+    width:60px;
  }
  /* Type Text */ 
  .sheet-textinput-name,
@@ -204,14 +205,24 @@ input.sheet-tab:checked:hover::before {
   float:left;     
  } 
  .sheet-meta4 {
-  width: 560px;
+  width:560px;
   float:left;      
  } 
  .sheet-meta5 {
-  float:left;     
+  width:410px;
+  float:left;  
+  padding-right:5px;  
  } 
  .sheet-meta6 {
-  float:left;      
+  width:410px;
+  float:right;      
+ }
+ .sheet-meta7 {
+  width:835px;      
+ }
+ .sheet-meta8 {
+  width:560px;
+  float:left;
  }
  .repcontrol {
   max-width: fit-content;
@@ -228,6 +239,14 @@ input.sheet-tab:checked:hover::before {
  } 
  .sheet-twocell-bottompadding {
     width: 550px;
+    padding-bottom:10px;
+ } 
+ .sheet-splitcell-bottompadding {
+    width: 410px;
+    padding-bottom:10px;
+ }
+ .sheet-fullwidth-bottompadding {
+    width: 825px;
     padding-bottom:10px;
  } 
  .sheet-name-role {
@@ -257,6 +276,12 @@ td {
  } 
  .sheet-table-threecolumn{
     width:810px;
+ } 
+ .sheet-table-splitcolumn{
+    width:410px;
+ } 
+ .sheet-table-fullwidth{
+    width:825px;
  } 
  .sheet-table-noleft{
     border-left:none;
